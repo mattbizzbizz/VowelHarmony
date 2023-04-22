@@ -1,0 +1,31 @@
+[2023-04-18 14:22:06,430 INFO] Missing transforms field for corpus_1 data, set to default: [].
+[2023-04-18 14:22:06,434 WARNING] Corpus corpus_1's weight should be given. We default it to 1 for you.
+[2023-04-18 14:22:06,434 INFO] Missing transforms field for valid data, set to default: [].
+[2023-04-18 14:22:06,449 INFO] Parsed 2 corpora from -data.
+[2023-04-18 14:22:06,453 INFO] Get special vocabs from Transforms: {'src': set(), 'tgt': set()}.
+[2023-04-18 14:22:06,453 INFO] Loading vocab from text file...
+[2023-04-18 14:22:06,453 INFO] Loading src vocabulary from toy-ende/run/example.vocab.src
+[2023-04-18 14:22:06,560 INFO] Loaded src vocab has 24995 tokens.
+[2023-04-18 14:22:06,577 INFO] Loading tgt vocabulary from toy-ende/run/example.vocab.tgt
+[2023-04-18 14:22:06,715 INFO] Loaded tgt vocab has 35816 tokens.
+[2023-04-18 14:22:06,738 INFO] Building fields with vocab in counters...
+[2023-04-18 14:22:06,789 INFO]  * tgt vocab size: 35820.
+[2023-04-18 14:22:06,853 INFO]  * src vocab size: 24997.
+[2023-04-18 14:22:06,855 INFO]  * src vocab size = 24997
+[2023-04-18 14:22:06,855 INFO]  * tgt vocab size = 35820
+Traceback (most recent call last):
+  File "/N/u/matabuzz/BigRed200/.local/bin/onmt_train", line 8, in <module>
+    sys.exit(main())
+  File "/N/u/matabuzz/BigRed200/.local/lib/python3.6/site-packages/onmt/bin/train.py", line 172, in main
+    train(opt)
+  File "/N/u/matabuzz/BigRed200/.local/lib/python3.6/site-packages/onmt/bin/train.py", line 157, in train
+    train_process(opt, device_id=0)
+  File "/N/u/matabuzz/BigRed200/.local/lib/python3.6/site-packages/onmt/train_single.py", line 64, in main
+    configure_process(opt, device_id)
+  File "/N/u/matabuzz/BigRed200/.local/lib/python3.6/site-packages/onmt/train_single.py", line 19, in configure_process
+    torch.cuda.set_device(device_id)
+  File "/N/u/matabuzz/BigRed200/.local/lib/python3.6/site-packages/torch/cuda/__init__.py", line 311, in set_device
+    torch._C._cuda_setDevice(device)
+  File "/N/u/matabuzz/BigRed200/.local/lib/python3.6/site-packages/torch/cuda/__init__.py", line 214, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
