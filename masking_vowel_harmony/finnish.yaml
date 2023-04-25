@@ -1,0 +1,29 @@
+# Finnish.yaml
+
+## Where the vocab(s) will be written
+save_data: vowel-harmony/Finnish/run/example
+# Prevent overwriting existing files in the folder
+overwrite: False
+
+# Corpus opts:
+data:
+    corpus_1:
+        path_src: vowel-harmony/Finnish/src-train.txt
+        path_tgt: vowel-harmony/Finnish/tgt-train.txt
+    valid:
+        path_src: data/Finnish/src-test.txt
+        path_tgt: data/Finnish/tgt-test.txt
+
+# Vocabulary files that were just created
+src_vocab: vowel-harmony/Finnish/run/example.vocab.src
+tgt_vocab: vowel-harmony/Finnish/run/example.vocab.tgt
+
+# Train on a single GPU
+world_size: 1
+gpu_ranks: [0]
+
+# Where to save the checkpoints
+save_model: vowel-harmony/Finnish/run/model
+save_checkpoint_steps: 500
+train_steps: 1000
+valid_steps: 500

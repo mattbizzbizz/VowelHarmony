@@ -1,0 +1,29 @@
+# Turkish.yaml
+
+## Where the vocab(s) will be written
+save_data: vowel-harmony/Turkish/run/example
+# Prevent overwriting existing files in the folder
+overwrite: False
+
+# Corpus opts:
+data:
+    corpus_1:
+        path_src: vowel-harmony/Turkish/src-train.txt
+        path_tgt: vowel-harmony/Turkish/tgt-train.txt
+    valid:
+        path_src: data/Turkish/src-test.txt
+        path_tgt: data/Turkish/tgt-test.txt
+
+# Vocabulary files that were just created
+src_vocab: vowel-harmony/Turkish/run/example.vocab.src
+tgt_vocab: vowel-harmony/Turkish/run/example.vocab.tgt
+
+# Train on a single GPU
+world_size: 1
+gpu_ranks: [0]
+
+# Where to save the checkpoints
+save_model: vowel-harmony/Turkish/run/model
+save_checkpoint_steps: 500
+train_steps: 1000
+valid_steps: 500
